@@ -1,32 +1,41 @@
 <!doctype html>
-<html lang="en">
+<html lang="es">
 
 <head>
   <meta charset="UTF-8" />
-  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>EncriptadorCodigo JF</title>
+  <link rel="stylesheet" href="./src/css/style.css" >
 </head>
 
 <body>
-  <img />
-  <section>
-    <div>
-      <input />
-      <p>Solo letras minúsculas y sin acentos</p>
-    </div>
-    <div>
-      <button>Encriptar</button>
-      <button>Desencriptar</button>
-
-    </div>
-  </section>
-  <section>
-    <img />
-    <h2>Ningun mensaje fuen encontrado</h2>
-    <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-
-  </section>
+  <header>
+    <img/>
+  </header>
+  <main class="container">
+    <section class="container__input">
+      <div>
+        <input type="text" placeholder="Ingrese el texto aquí" class="input__encriptador"/>
+      
+      </div>
+      <div>
+        <div class="texto">
+          <img src="./assets/icono.png">
+          <p>Solo letras minúsculas y sin acentos</p>
+        </div>
+      
+        <button class="boton__encriptar">Encriptar</button>
+        <button class="boton__desencriptar">Desencriptar</button>
+      </div>
+    </section>
+    <section class="container__codigoencriptado">
+      <img class="imagen_mucheco" src="./assets/Muñeco.png" alt="muñeco encriptador" />
+      <h2>Ningún mensaje fue encontrado</h2>
+      <p>Ingresa el texto que desees encriptar o desencriptar.</p>
+  
+    </section>
+  </main>
+  
 
   <script></script>
 </body>
