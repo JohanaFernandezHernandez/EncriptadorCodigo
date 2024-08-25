@@ -1,43 +1,56 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="es">
-
-<head>
-  <meta charset="UTF-8" />
+  <head>
+    <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>EncriptadorCodigo JF</title>
-  <link rel="stylesheet" href="./src/css/style.css" >
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+    <title>EncriptadorCodigo JF</title>
+    <link rel="stylesheet" href="./src/css/style.css" />
+  </head>
 
-<body>
-  <header>
-    <img/>
-  </header>
-  <main class="container">
-    <section class="container__input">
-      <div>
-        <input type="text" placeholder="Ingrese el texto aquí" class="input__encriptador"/>
-      
-      </div>
-      <div>
-        <div class="texto">
-          <img src="./assets/icono.png">
-          <p>Solo letras minúsculas y sin acentos</p>
+  <body>
+    <header>
+      <img class="logo" src="./assets/Logo.png" alt="logo alura" />
+    </header>
+    <main class="container">
+      <section class="container__input">
+        <textarea
+          cols="30"
+          rows="10"
+          id="input-text"
+          placeholder="Ingrese el texto aquí"
+          class="input__encriptador"
+        ></textarea>
+        <div>
+          <div class="texto">
+            <img src="./assets/icono.png" />
+            <p class="textoIndicativo">Solo letras minúsculas y sin acentos</p>
+          </div>
+
+          <div>
+            <button onclick="btnEncriptar()" class="boton__encriptar" id="encrypt-btn">Encriptar</button>
+            <button onclick="btnDesencriptar()" class="boton__desencriptar" id="decrypt-btn">Desencriptar</button>
+          </div>
         </div>
-      
-        <button class="boton__encriptar">Encriptar</button>
-        <button class="boton__desencriptar">Desencriptar</button>
-      </div>
-    </section>
-    <section class="container__codigoencriptado">
-      <img class="imagen_mucheco" src="./assets/Muñeco.png" alt="muñeco encriptador" />
-      <h2>Ningún mensaje fue encontrado</h2>
-      <p>Ingresa el texto que desees encriptar o desencriptar.</p>
-  
-    </section>
-  </main>
-  
+      </section>
+      <section class="container__codigo">
+        <textarea
+          class="container__codigoencriptado"
+          id="output-text"
+          readonly
+          >
+        </textarea>
+        <div id="placeholder-text">
+          <h3 class="titulo_mensaje">Ningún mensaje fue encontrado</h3>
+          <p class="parrafo_mensaje">Ingresa el texto que desees encriptar o desencriptar.</p>
+        </div>
 
-  <script></script>
-</body>
+        <button onclick="copiarTexto()" class="boton__desencriptar btn_copiar" >Copiar</button>
+      </section>
+    </main>
 
+    <script src="./src/js/main.js"></script>
+  </body>
 </html>
