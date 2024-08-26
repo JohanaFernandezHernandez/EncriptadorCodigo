@@ -16,13 +16,13 @@ function btnEncriptar(){
 
   const screenWidth = window.innerWidth; // Definir screenWidth aquí
 
-  // Mostrar el botón si hay texto en el área de salida
   if (mensajeEncriptado) {
     mensaje.style.backgroundImage = "none";
     document.getElementById("placeholder-text").style.display = "none";
     copyButton.style.display = "block";
+    document.getElementById("output-text").style.display = "block" ;
   } else {
-    mensaje.style.backgroundImage = (screenWidth > 900) ? "url(../../assets/Muñeco.png)" : "none";
+    mensaje.style.backgroundImage = (screenWidth > 1152) ? "url(../../assets/Muñeco.png)" : "none";
     document.getElementById("placeholder-text").style.display = "block";
     copyButton.style.display = "none";
   }
@@ -39,8 +39,9 @@ function btnDesencriptar(){
     mensaje.style.backgroundImage = "none";
     document.getElementById("placeholder-text").style.display = "none";
     copyButton.style.display = "block";
+    document.getElementById("output-text").style.display = "block" ;
   } else {
-    mensaje.style.backgroundImage = (screenWidth > 900) ? "url(../../assets/Muñeco.png)" : "none";
+    mensaje.style.backgroundImage = (screenWidth > 1152) ? "url(../../assets/Muñeco.png)" : "none";
     document.getElementById("placeholder-text").style.display = "block";
     copyButton.style.display = "none";
   }
@@ -80,8 +81,9 @@ function copiarTexto(){
 
   setTimeout(function() {
     mensaje.value = ""; 
-    mensaje.style.backgroundImage = (screenWidth > 900) ? "url(../../assets/Muñeco.png)" : "none";
+    mensaje.style.backgroundImage = (screenWidth > 1152) ? "url(../../assets/Muñeco.png)" : "none";
     document.getElementById("placeholder-text").style.display = "block";
+    document.getElementById("output-text").style.display =(screenWidth > 1152) ? "block" : "none";
     copyButton.style.display = "none";
 }, 3000); 
 }
