@@ -8,14 +8,26 @@ const copyButton = document.querySelector(".btn_copiar");
 //La letra "o" es convertida para "ober"
 //La letra "u" es convertida para "ufat"
 
+function validarTexto(texto) {
+  const regex = /^[a-z\s]+$/;
+  return regex.test(texto);
+}
+
 function btnEncriptar(){
+
+  const texto = textArea.value;
+
+  if (!validarTexto(texto)) {
+    alert("El texto solo debe contener letras minúsculas sin acentos ni caracteres especiales.");
+    return; 
+  }
+
   const mensajeEncriptado = encriptar(textArea.value);
   mensaje.value = mensajeEncriptado;
   textArea.value ="";
   mensaje.style.backgroundImage = "none";
 
-  const screenWidth = window.innerWidth; // Definir screenWidth aquí
-
+  const screenWidth = window.innerWidth; 
   if (mensajeEncriptado) {
     mensaje.style.backgroundImage = "none";
     document.getElementById("placeholder-text").style.display = "none";
